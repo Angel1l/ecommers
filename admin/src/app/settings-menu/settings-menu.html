@@ -1,0 +1,25 @@
+<button matIconButton
+[matMenuTriggerFor]="menu"
+matTooltip="Opciones"
+matTooltipPosition="below">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>
+                account_circle
+            </mat-icon>
+            <span>
+                perfil
+            </span>
+        </button>
+         <button mat-menu-item>
+            <mat-icon>
+                logout
+            </mat-icon>
+            <span>
+                cerrar sesion
+            </span>
+        </button>
+    </mat-menu>

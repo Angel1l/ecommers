@@ -1,0 +1,33 @@
+<mat-toolbar>
+    <button matIconButton
+    matTooltip="menu"
+    matTooltipPosition="below"
+    (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Mi panel Administrativo</span>
+    <span class="spacer"></span>
+    <button matIconButton>
+        <mat-icon>light_mode</mat-icon>
+    </button>
+<app-settings-menu>
+</app-settings-menu>
+
+</mat-toolbar>
+
+<mat-drawer-container class="style-container">
+    <mat-drawer
+    #drawer
+    [mode]="isMobile()?'over':'side'"
+    [opened]="!isMobile()"
+    position="start">
+        <app-drawer-menu
+        (itemClicked)="onNavigation()">
+        </app-drawer-menu>
+    </mat-drawer>
+    <mat-drawer-content style="padding: 10px">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+

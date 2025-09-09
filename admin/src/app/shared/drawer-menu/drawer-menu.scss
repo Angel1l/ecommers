@@ -1,0 +1,29 @@
+.style-menu{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.mat-icon{
+margin-right: 10px;
+}
+.expand-submenu{
+    margin-left:auto;
+    margin-right: 0;
+}
+.expand-icon{
+    color: var(--mat-sys-primary)
+}
+.submenu-content{
+    padding-left: 20px;
+}
+.activeLink{
+    background-color: rgb(255, 127, 127);
+}
+mat-list-item{
+    border-radius: 2px !important;
+    margin-left: 10px;
+    font-weight: bold !important;
+}
+mat-nav-list{
+    width: 227px;
+}

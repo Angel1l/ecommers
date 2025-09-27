@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { MaterialModule } from '../../material/material-module';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+   standalone: true,
+  imports: [MaterialModule],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

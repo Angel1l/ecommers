@@ -1,1 +1,61 @@
-<p>home works!</p>
+<mat-toolbar color="primary">
+  <span>Panel Administrativo</span>
+  <span class="spacer"></span>
+
+  <!-- Menú de perfil -->
+  <button mat-icon-button [matMenuTriggerFor]="perfilMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu #perfilMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>account_circle</mat-icon>
+    <span>Perfil</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+</mat-menu>
+
+<!-- Página de presentación -->
+<div class="presentation">
+  <h1>Bienvenido al Panel Administrativo</h1>
+  <p>
+    Aquí podrás gestionar <b>usuarios</b>, revisar <b>reportes</b> y configurar 
+    <b>preferencias</b> del sistema. Usa el menú superior para acceder a las opciones.
+  </p>
+
+  <div class="cards">
+    <mat-card>
+      <mat-card-header>
+        <mat-icon>group</mat-icon>
+        <span>Usuarios</span>
+      </mat-card-header>
+      <mat-card-content>
+        Administra usuarios, agrega nuevos perfiles y gestiona permisos.
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-icon>bar_chart</mat-icon>
+        <span>Reportes</span>
+      </mat-card-header>
+      <mat-card-content>
+        Consulta estadísticas y reportes detallados del sistema.
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-icon>settings</mat-icon>
+        <span>Configuración</span>
+      </mat-card-header>
+      <mat-card-content>
+        Ajusta preferencias y controla la seguridad del sistema.
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

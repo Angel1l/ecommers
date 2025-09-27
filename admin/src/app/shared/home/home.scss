@@ -1,0 +1,31 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.presentation {
+  padding: 30px;
+  text-align: center;
+}
+
+.presentation h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.presentation p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+mat-card {
+  width: 250px;
+  padding: 15px;
+  text-align: left;
+}

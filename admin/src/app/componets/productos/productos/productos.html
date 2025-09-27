@@ -1,6 +1,73 @@
-<button matFab extended>
-        <mat-icon>
-            add
-        </mat-icon>
-        NUEVO
-</button>
+<mat-toolbar color="primary">
+  <span>Panel de Productos</span>
+  <span class="spacer"></span>
+
+  <!-- Menú de perfil -->
+  <button mat-icon-button [matMenuTriggerFor]="perfilMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu #perfilMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>account_circle</mat-icon>
+    <span>Perfil</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+</mat-menu>
+
+<div class="presentation">
+  <h1>Bienvenido al Panel de Productos</h1>
+  <p>
+    Gestiona <b>productos</b>, revisa <b>categorías</b> y administra <b>ofertas</b>.
+  </p>
+
+  <div class="cards">
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-icon>add_shopping_cart</mat-icon>
+        <span>Agregar Producto</span>
+      </mat-card-header>
+      <mat-card-content>
+        Crea nuevos productos con detalles completos.
+      </mat-card-content>
+      <button mat-button class="card-btn">Agregar</button>
+    </mat-card>
+
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-icon>inventory_2</mat-icon>
+        <span>Lista de Productos</span>
+      </mat-card-header>
+      <mat-card-content>
+        Consulta todos los productos disponibles.
+      </mat-card-content>
+      <button mat-button class="card-btn">Ver lista</button>
+    </mat-card>
+
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-icon>category</mat-icon>
+        <span>Categorías</span>
+      </mat-card-header>
+      <mat-card-content>
+        Organiza productos por categorías.
+      </mat-card-content>
+      <button mat-button class="card-btn">Ver categorías</button>
+    </mat-card>
+
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-icon>local_offer</mat-icon>
+        <span>Ofertas</span>
+      </mat-card-header>
+      <mat-card-content>
+        Gestiona promociones y descuentos.
+      </mat-card-content>
+      <button mat-button class="card-btn">Ver ofertas</button>
+    </mat-card>
+  </div>
+</div>

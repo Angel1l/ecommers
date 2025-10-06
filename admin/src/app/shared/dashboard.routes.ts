@@ -38,6 +38,12 @@ export const dashboardRoutes:Routes=[
                 .then((m)=>m.subcomponetRoutes)
             },
             {
+                 path:'agregar',
+                loadChildren:()=>
+                    import ('../componets/agregar/agregarProd.routes')
+                .then((m)=>m.agregarPRoutes)
+            },
+            {
                 path:'**',
                 redirectTo:'home',
                 pathMatch:'full'

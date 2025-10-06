@@ -12,6 +12,16 @@ export const ProductosRoutes:Routes=[
         loadComponent:()=>import('./productos/productos').then((m)=>m.Productos)
     },
     {
+        path:'producto',
+        loadComponent:()=>import('./productos/productos').then((m)=>m.Productos)
+    },
+    {
+                 path:'agregar',
+                loadChildren:()=>
+                    import ('../../menus/menus.routes')
+                .then((m)=>m.agregarPRoutes)
+            },
+    {
         path:'**',
         redirectTo:'producto',
         pathMatch:'full'
